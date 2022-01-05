@@ -5,4 +5,4 @@ Skillbox. Онлайн курс: Веб-верстка «Базовый уров
 
 Ссылки
 - [Макет в figma](/Blanchard.fig)
-- [Пример живой страницы](https://dimoncss.ru/myworks/laslesvpn/)
+- [Пример живой страницы](https://dimoncss.ru/myworks/course_work/)
