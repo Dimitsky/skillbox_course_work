@@ -1,0 +1,1654 @@
+\:root
+  box-sizing: border-box
+  font: 400 16px/2 'Open Sans', sans-serif
+
+  // переменные для цветов
+  --c__black: #000
+  --c__white: #fff
+
+  --c__brand--darker: #7943A4
+  --c__brand--dark: #9D5CD0
+  --c__brand--light: #C283F3
+  --c__brand--lighter: #D1A9F0
+
+  --c__gray--darkest: #333
+  --c__gray--darker: #666
+  --c__gray--dark: #999
+  --c__gray--common: #b0b0b0
+  --c__gray--light: #cacaca
+  --c__gray--lighter: #eaeaea
+  --c__gray--lightest: #ececec
+
+  --c__disabled: #b3b3b3
+
+  //
+  --s__chevron: 30px
+  --p__link: 6px
+
+  // переменные для переходов
+  --t__func: ease-in-out
+  --t__dur: 250ms
+
+*, 
+::after,
+::before
+  box-sizing: inherit
+
+.body
+  min-width: 280px
+
+img, embed, object, video, picture
+  max-width: 100%
+
+body
+  margin: auto
+  max-width: 1920px
+
+.visually-hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    clip: rect(1px, 1px, 1px, 1px)
+    overflow: hidden
+    white-space: nowrap
+
+// .button
+//
+
+.button
+  position: relative
+  padding: 0px
+  border: 2px solid var(--c__brand--dark)
+  border-radius: 100px
+  color: var(--c__white)
+  font-family: inherit
+  font-size: 12px
+  font-weight: 700
+  background: transparent
+  cursor: pointer
+  transition-property: border, color, background-color
+  transition-duration: var(--t__dur)
+  transition-timing-function: var(--t__func)
+  &::after
+    --position: -6px
+    content: ''
+    position: absolute
+    top: var(--position)
+    right: var(--position)
+    bottom: var(--position)
+    left: var(--position)
+    border: 2px solid transparent
+    border-radius: 100px
+    transition: border var(--t__dur) var(--t__func)
+  &:focus
+    outline: none
+  &:focus::after
+    border-color: var(--c__brand--light)
+  &:active
+    border-color: var(--c__brand--lighter)
+    color: var(--c__white)
+    background: var(--c__brand--darker)
+  &--fill
+    background: var(--c__brand--dark)
+  
+.button-reset
+  border: none
+  border-radius: 0
+  padding: 0
+  background: none
+
+// .card
+// 
+
+.card
+  &__img-wrap
+    background-position: center center
+    background-size: cover
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__body
+
+.body-card
+  &__inner
+  &__info
+  &__price
+    font-style: italic
+
+  &__desc
+
+// .check
+//   
+
+.check
+  padding-left: 1.2em
+  &__input
+    position: absolute
+    border: 0
+    margin: -1px
+    padding: 0
+    width: 1px
+    height: 1px
+    clip: rect(0 0 0 0)
+    overflow: hidden
+  &__box
+    position: absolute
+    margin-left: -1.2em
+    width: 1.2em
+    height: 1.2em
+
+.unselectable
+  -webkit-touch-callout: none /* iOS Safari */
+  -webkit-user-select: none   /* Chrome/Safari/Opera */
+  -khtml-user-select: none    /* Konqueror */
+  -moz-user-select: none      /* Firefox */
+  -ms-user-select: none       /* Internet Explorer/Edge */
+  user-select: none           /* Non-prefixed version, currently not supported by any browser */
+
+// .container
+//   
+
+.container
+  margin: 0
+  padding: 0 15px
+
+// .link
+//   
+
+.link
+  position: relative
+  z-index: 1
+  transition: color var(--t__dur) var(--t__func)
+  &--weight--semibold
+    font-weight: 600
+  &::after
+    content: ''
+    position: absolute
+    top: -3px
+    right: -7px
+    bottom: -3px
+    left: -7px
+    z-index: -1
+    background-color: transparent
+    transition: background-color var(--t__dur) var(--t__func)
+  &:focus
+    outline: none
+    color: var(--c__white)
+    &::after
+      background-color: var(--c__brand--darker)
+
+.link--inline
+  color: var(--c__brand--dark)
+  text-decoration: none
+  &::before
+    content: ''
+    position: absolute
+    left: 1px
+    right: 0
+    bottom: 2px
+    height: 1px
+    background-color: transparent
+    transition: background-color var(--t__dur) var(--t__func)
+  &:active:not(:focus)
+    color: var(--c__brand--darker) 
+    &::before
+      color: inherit
+      background-color: currentColor
+
+.link--trigger
+  color: var(--c__gray--darkest)
+  &:active::before
+    background-color: transparent
+
+.link--nav
+  color: var(--c__white)
+  font-weight: 600
+  text-decoration: none
+  &:active:not(:focus)
+    color: var(--c__brand--darker) 
+
+.link--dropdown
+  color: var(--c__white)
+  text-decoration: none
+  &:hover:not(:focus)
+    color: var(--c__brand--dark)
+  &:active:not(:focus)
+    color: var(--c__brand--darker) 
+
+.link--login
+  border: 2px solid var(--c__brand--dark)
+  border-radius: 100px
+  display: inline-block
+  color: var(--c__white)
+  font-size: .75rem
+  line-height: 1
+  text-decoration: none
+  transition: background-color var(--t__dur) var(--t__func), border-color var(--t__dur) var(--t__func)
+  &::after
+    content: ''
+    top: -6px
+    right: -6px
+    bottom: -6px
+    left: -6px
+    border: 2px solid transparent
+    border-radius: 100px
+    transition: border-color var(--t__dur) var(--t__func)
+  &:focus
+    &::after
+      border-color: var(--c__brand--light) 
+  &:active
+    border-color: var(--c__brand--lighter) 
+    color: var(--c__white) 
+    background-color: var(--c__brand--darker) 
+
+// .list-reset
+//
+
+.list-reset
+  margin: 0
+  padding: 0
+  list-style: none
+
+// .text
+// 
+
+.text
+  margin: 0
+  font-size: .875rem
+  font-weight: 400
+  line-height: 1.75rem
+  &--color--white
+    color: white
+  &--weight--bold
+    font-weight: 700
+  &--weight--semibold
+    font-weight: 600
+
+// .title
+// 
+
+.title
+  margin: 0
+  line-height: 1
+  &--color--white
+    color: white
+  &--size--lg
+    font-size: 2rem
+  &--size--md
+    font-size: 1.75rem
+  &--size--sm
+    font-size: 1.5rem
+  &--size--xs
+    font-size: 1.125rem
+  &--weight--bold
+    font-weight: 700
+  &--weight--semibold
+    font-weight: 600
+  &--weight--regular
+    font-weight: 400
+
+// .header
+//
+
+.header
+  position: relative
+  &__top
+    height: 45px
+    background: var(--c__black)
+  &__container--top
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+  &__hamburger
+    position: absolute
+    top: 13px
+    left: 15px
+    z-index: 0
+    width: 25px
+    height: 18px
+    cursor: pointer
+    transition: z-index 0s var(--t__dur)
+  &__dropdown
+    display: none
+  &__logo
+    width: 97px
+    height: 22px
+    & svg
+      display: block
+      width: 100%
+      height: 100%
+      transition: fill var(--t__dur) var(--t__func)
+      fill: var(--c__white)
+    &:focus
+      outline: none
+    &:focus svg
+      fill: var(--c__gray--light)
+    &:active svg
+      fill: var(--c__brand--dark)
+  &__nav
+
+.nav
+  &__wrap
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    display: flex
+    flex-direction: column
+    padding: 48px 15px 27px
+    width: 100%
+    min-height: 355px
+    background: rgba(0,0,0,.9)
+    visibility: hidden
+    overflow: hidden
+    transform: translateY(-100%)
+    transition: visibility 0s var(--t__dur) var(--t__func), transform var(--t__dur) var(--t__func) 
+    &.active
+      visibility: visible
+      transform: translateY(0px)
+      transition-delay: 0s, 0s
+  &__list
+    margin: 0 0 16px
+    padding: 0
+    list-style: none
+  &__account
+    align-self: flex-start
+    margin-top: auto
+
+.account
+  &__link
+    padding: 11px 30px 13px
+  &__icon
+    width: 9px
+    height: 9px
+
+.hamburger
+  border: none
+  border-radius: 0
+  padding: 0
+  background: none
+  &[aria-expanded="true"]
+      z-index: 2
+      transition-delay: 0s
+  &[aria-expanded="true"] > &__line
+    top: 9px
+    transition-delay: 0ms, 0ms, calc(var(--t__dur) / 2), calc(var(--t__dur) / 2), calc(var(--t__dur) / 2)
+  &[aria-expanded="true"] > &__line--top
+    transform: rotate(-45deg)
+  &[aria-expanded="true"] > &__line--mid
+    opacity: 0
+  &[aria-expanded="true"] > &__line--bot
+    width: 100%
+    transform: rotate(-135deg)
+  &:focus
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0,1), 0px 0px 0px 4px rgba(255,255,255,1)
+    outline: none
+  &__line
+    position: absolute
+    left: 0
+    height: 2px
+    background: var(--c__white)
+    transition-property: top, width, transform, -webkit-transform, opacity
+    transition-duration: calc(var(--t__dur) / 2)
+    transition-delay: calc(var(--t__dur) / 2), calc(var(--t__dur) / 2), 0ms, 0ms, calc(var(--t__dur) / 2)
+    transition-timing-function: var(--t__func)
+    &--top
+      top: 0
+      width: 25px
+    &--mid
+      top: 8px
+      width: 16px
+    &--bot
+      top: 16px
+      width: 10px
+
+.search
+  transition: z-index 0s var(--t__dur)
+  &[aria-expanded="true"]
+      z-index: 2
+      transition-delay: 0s
+  &.active
+    visibility: visible
+    transform: translateY(0px)
+    overflow: auto
+    transition-delay: 0s, 0s
+  &.active
+    height: 75px
+  &__close-btn
+    position: absolute
+    top: 11px
+    right: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 20px
+    height: 20px
+    fill: var(--c__white)
+    cursor: pointer
+    transition: fill var(--t__dur) var(--t__func)
+    &:focus
+      box-shadow: 0px 0px 0px 2px rgba(0,0,0,1), 0px 0px 0px 4px rgba(255,255,255,1)
+      outline: none
+    &[aria-expanded="true"]
+      z-index: 2
+    &[aria-expanded="false"] > .search__icon--close
+      display: none
+    &[aria-expanded="false"] > .search__icon--open
+      display: block
+    &[aria-expanded="true"] > .search__icon--close
+      display: block
+    &[aria-expanded="true"] > .search__icon--open
+      display: none
+  &__input-wrap
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    padding-bottom: 19px
+    width: 100%
+    height: 75px
+    background: rgba(0,0,0,.9)
+    visibility: hidden
+    overflow: hidden
+    transform: translateY(-75px)
+    transition: visibility 0s var(--t__dur) var(--t__func), transform var(--t__dur) var(--t__func) 
+    &.active
+      opacity: 1
+      visibility: visible
+      transform: translateY(0px)
+      transition-delay: 0s
+  &__icon
+    display: block
+    fill: white
+    transition: fill var(--t__dur) var(--t__func)
+  &__icon--close
+    width: 15px
+    height: 15px
+  &__icon--open
+    display: none
+    width: 18px
+    height: 18px
+  &__icon--find
+    width: 16px
+    height: 16px
+  &__find-btn
+    margin-right: 3px
+    width: 16px
+    height: 16px
+    &:focus
+      box-shadow: 0px 0px 0px 2px rgba(0,0,0,1), 0px 0px 0px 4px rgba(255,255,255,1)
+      outline: none
+
+  &__input
+    border: none
+    border-bottom: 1px solid rgba(255,255,255,.85)
+    border-radius: 0
+    margin-right: 2%
+    width: 180px
+    color: var(--c__white)
+    background: none
+    transition: border var(--t__dur) var(--t__func)
+    &:focus
+      border-color: var(--c__brand--light)
+      outline: none
+    &:active
+      border-color: var(--c__brand--darker)
+  &__input::placeholder
+    color: rgba(255,255,255,.85)
+
+// .hero
+//
+
+.hero
+  &__wrap
+    position: relative
+    display: flex
+    flex-direction: column
+    margin: auto
+    padding-top: 33px
+    padding-bottom: 45px
+    min-height: 310px
+    max-width: 1920px
+    text-align: center
+  &__container
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+  &__title
+    margin-bottom: 12px
+    line-height: 1.16
+  &__text
+    margin: 0 auto 39px
+    padding: 0 10px
+    max-width: 370px
+    color: var(--c__white)
+    font-size: .75rem
+    line-height: 1rem
+  &__link
+    align-self: center
+    display: inline-block
+    margin-top: auto
+    text-decoration: none
+  &__dispatch-button
+    padding: .4em 1.404em .6em 1.6em
+    font-size: .75rem
+  
+@keyframes background-scale
+  from
+    transform: scale(1)
+  to
+    transform: scale(1.3)
+
+// .bg
+
+.bg
+  &__item.active
+    animation: background-scale 9s ease-in-out infinite alternate
+  &__image
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 100%
+
+// .simplebar
+//
+
+.simplebar-track.simplebar-vertical
+  top: 0
+  bottom: 0
+  width: 2px
+
+.simplebar-track
+  right: -21px
+  background: var(--c__black)
+
+.simplebar-scrollbar
+  background: var(--c__white)
+
+// .about
+//   
+
+.about
+  &__container
+    padding-top: 55px
+    padding-bottom: 41px
+
+  &__title
+    margin-bottom: 17px
+
+// .gallery
+//
+
+.gallery
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: #333
+  background-image: url('../img/gallery/gallery-bg@320w.jpg')
+  &__container
+    padding-top: 55px
+    padding-bottom: 40px
+  &__title
+    margin-bottom: 17px
+  &__form
+    margin-bottom: 40px
+  &__text
+    color: var(--c__white)
+    font-size: 1rem
+    font-weight: 600
+    line-height: 2rem
+  &__swiper
+    margin-bottom: 9px
+
+/* HD/Retina CSS background */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+  .gallery
+    background-image: url('../img/gallery/gallery-bg@640w.jpg')
+
+
+.form-gallery
+  &__label
+    display: block
+    margin-bottom: 5px
+
+// .swiper-gallery
+//   
+
+.swiper-gallery
+  position: relative
+  width: 100%
+  overflow: hidden
+  height: 133.8vw
+  &__wrapper
+    display: flex
+    margin-bottom: 19px
+    width: 100%
+    height: calc(100% - 61px)
+    // height: auto
+  &__slide
+    flex-shrink: 0
+    background: var(--c__white)
+    overflow: hidden
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__image-wrap
+    position: relative
+    width: 100%
+    height: 100%
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      border: 2px solid transparent
+      width: 100%
+      height: 100%
+      padding: 25px
+      background: no-repeat center / 81px 79px rgba(0,0,0,.5) url('../img/slide-loupe.svg')
+      background-clip: content-box
+      opacity: 0
+      transition: opacity var(--t__dur) var(--t__func), border-color var(--t__dur) var(--t__func)
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border: 3px solid transparent
+      background-color: transparent
+      transition: border-color var(--t__dur) var(--t__func), background-color var(--t__dur) var(--t__func)
+    &:active::after
+      background-color: rgba(194,131,243,.4)
+    &:active::before
+      border-color: var(--c__brand--lighter)
+    &:focus
+      outline: none
+    &:focus::after
+      border-color: var(--c__brand--darker)
+  &__pagination-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+  &__button
+    position: static
+    width: auto
+    height: auto
+    display: block
+    margin: 0
+    cursor: pointer
+  &__button--disabled
+    opacity: .35
+    cursor: auto
+    pointer-events: none
+  &__button:after
+    content: none
+  &__pagination
+    position: static
+    margin: 0 14px
+    color: var(--c__white)
+  &__notification
+    position: absolute
+    top: 0
+    left: calc(50% + 15px / 2)
+    display: none
+    color: wheat
+    line-height: 1
+    font-size: 1.5rem
+
+// .icon
+//   
+
+.icon 
+  & svg
+    display: block
+    transition: fill var(--t__dur) var(--t__func), stroke var(--t__dur) var(--t__func), transform var(--t__dur) var(--t__func)
+  &--arrow-cyrcle
+    & svg
+      width: 30px
+      height: 30px
+    &--dark
+      & svg
+        color: white
+        fill: #666
+        stroke: #666
+      &:focus
+        outline: none
+        & svg
+          stroke: var(--c__black)
+      &:active
+        & svg
+          fill: var(--c__brand--darker)
+    &--light
+      & svg
+        color: black
+        fill: var(--c__gray--lightest)
+        stroke: var(--c__gray--lightest)
+      &:focus
+        & svg
+          stroke: var(--c__brand--dark)
+      &:focus
+        & svg
+      &:active
+        & svg
+          fill: var(--c__brand--lighter)
+
+.swiper-pagination-fraction
+  width: auto
+
+// .catalog
+//   
+
+@keyframes tabbyAnimation
+  0%
+    display: none
+    opacity: 0
+  1%
+    display: block
+  100%
+    opacity: 1
+      
+.catalog
+  &__container
+    padding-top: 55px
+  &__tab-content
+    animation: 2s ease tabbyAnimation
+    opacity: 1
+    &[hidden="hidden"]
+      opacity: 0
+  &__tab-list
+    display: flex
+    justify-content: space-between
+    margin: 0 0 20px 0
+    padding: 0
+    list-style: none
+  &__tab-item:not(:last-child)
+    margin-right: 32px
+  &__tab-trigger
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    display: block
+    border-radius: 100px
+    width: 32px
+    height: 32px
+    cursor: pointer
+    outline: none
+    transition: box-shadow var(--t__dur) var(--t__func)
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      border: 2px solid transparent
+      border-radius: 100px
+      width: 100%
+      height: 100%
+      transition: border-color var(--t__dur) var(--t__func)
+    &::after
+      content: ''
+      position: absolute
+      top: -8px
+      left: -8px
+      border: 2px solid transparent
+      border-radius: 100px
+      width: calc(100% + 16px)
+      height: calc(100% + 16px)
+      transition: border-color var(--t__dur) var(--t__func)
+    &:focus
+      box-shadow: -2px -2px 20px 0px rgba(157,92,208,.7)
+    &:active
+      &::before
+        border-color: var(--c__brand--darker)
+    &[aria-selected=true]::after
+      border-color: var(--c__brand--darker)
+  &__title
+    margin-bottom: 17px
+  &__accordion-container
+    margin-bottom: 52px
+  &__accordion
+    margin-top: 0px
+
+.artists-catalog
+  &__image-wrap
+    margin-bottom: 25px
+    height: 56.57vw
+    overflow: hidden
+    &--unknown-artist
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      background-color: var(--c__gray--lightest)
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__title
+    margin-bottom: 9px
+    &--unknown-artist
+      margin-bottom: 9px
+  &__date
+    color: var(--c__gray--dark)
+    font-size: .75rem
+    line-height: 1.333
+  &__text
+    margin: 0
+    padding-right: 1px
+    &--unknown-artist
+      line-height: 1.375
+  &__unknown-artist-image
+    width: 37%
+  &__unknown-artist-name
+    margin: 0
+    color: var(--c__gray--darker)
+    font-size: 1.125rem
+    font-weight: 600
+  &__gallery-link
+    font-weight: 600
+
+.tab-content-catalog
+  &__description
+    display: none
+  &__tablist
+  &__item
+  &__trigger
+    &[aria-selected=true]:not(:focus)
+      color: var(--c__brand--darker)
+  &__panel
+    margin: 45px 0
+    opacity: 1
+    animation: 1s ease tabbyAnimation
+    &[hidden="hidden"]
+      opacity: 0
+
+.accordion-catalog
+  border: none
+  &__wrap
+    &--default
+      display: flex
+      align-items: center
+      padding: 25px 0
+  &__header
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: contain
+  &__trigger
+    position: relative
+    display: flex !important
+    justify-content: space-between
+    align-items: center
+    border: none !important
+    padding: 20px 0 17px !important
+    color: var(--c__gray--darkest)
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: -1px
+      left: 0
+      border-top: 1px solid var(--c__gray--light)
+      border-bottom: 1px solid var(--c__gray--light)
+      width: 100%
+      transition: border-color var(--t__dur) var(--t__func) !important
+    & svg
+      flex-shrink: 0
+      fill: var(--c__gray--light)
+      stroke: var(--c__gray--light)
+  &__trigger-inner
+    position: relative
+    z-index: 1
+    margin-right: 25px
+    color: inherit
+    font-family: 'Open Sans'
+    font-size: 1.125rem
+    font-weight: 600
+    line-height: 2
+    transition: color var(--t__dur) var(--t__func)
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      background-color: transparent
+      transition: background-color var(--t__dur) var(--t__func)
+  &__content
+    padding-top: 20px
+    padding-bottom: 20px
+  &__default-image
+    flex-shrink: 0
+    width: 90px
+    height: 130px
+    border: 2px solid #b7b7b7
+    background-color: #b7b7b7
+    background-clip: content-box
+    margin-right: 25px
+    padding: 2px
+  &__default-content
+  &__default-title
+    margin: 0
+    color: var(--c__gray--darkest)
+    line-height: 2rem
+  &__default-text
+    margin: 0
+    color: var(--c__gray--darkest)
+    line-height: 1.375
+  &__default-title, &__default-text
+    margin-bottom: 5px
+  &__default-link
+    line-height: 1.375rem
+  //z-index нужен, чтобы перекрытые границы были на переднем фоне
+  &__trigger:hover::before, &__trigger:focus::before, &__trigger:active::before
+    z-index: 1
+  &__trigger:focus
+    outline: none
+  &__trigger:focus &__trigger-inner
+    color: var(--c__white)
+  &__trigger:focus &__trigger-inner::after
+    background-color: var(--c__brand--dark)
+  &__trigger:focus svg
+    fill: var(--c__brand--lighter)
+    stroke: var(--c__brand--lighter)
+  &__trigger:active
+    color: var(--c__brand--darker)
+  &__trigger:active::before
+    border-color: var(--c__brand--darker) !important
+    color: var(--c__brand--darker)
+  &__trigger:active svg
+    stroke: var(--c__brand--darker)
+  &__trigger
+    &::after
+      content: none !important
+  &__panel
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 20px 0 !important
+  &--active .accordion-catalog__trigger svg
+    transform: rotate(180deg)
+  &--active .ac-panel
+    visibility: visible !important
+  &--active > .ac-header .ac-trigger::after
+    content: none
+
+// .events
+//   
+
+.events
+  &__container
+    padding-top: 11px
+    padding-bottom: 40px
+  &__title
+    margin-bottom: 17px
+  &__image-wrapper
+    margin-bottom: 4px
+  &__load-more
+    display: none
+    padding: .973em 1.857em
+    color: var(--c__brand--dark)
+    font-size: 1.125rem
+    cursor: pointer
+
+.swiper-events
+  position: relative
+  width: 100%
+  overflow: hidden
+  &__wrapper
+    display: flex
+    width: 100%
+    height: 100%
+  &__slide
+    display: flex
+    flex-direction: column
+    margin-bottom: 8px
+    height: auto
+  &__pagination
+    display: block
+
+.pagination-swiper-events
+  position: static
+  text-align: center
+  transition: .3s opacity
+  transform: translate3d(0,0,0)
+  &__bullet
+    width: 10px
+    height: 10px
+    display: inline-block
+    border-radius: 50%
+    margin: 0 8px
+    background: #000
+    opacity: .2
+  &__bullet--active
+    background: #666
+    opacity: 1
+  
+.slide-swiper-events
+  &__image-wrapper
+    height: 62.5vw
+  &__body
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    flex-grow: 1
+    border: 1px solid var(--c__gray--light)
+    border-top: transparent
+    padding: 13px 10px 48px 27px
+.image-wrapper-slide-swiper-events
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.body-slide-swiper-events
+  &__meta
+    align-self: flex-end
+    margin-bottom: 5px
+  &__title
+    line-height: 2rem
+  &__description
+    margin-top: 0
+    margin-bottom: 30px
+    padding-right: 13px
+  &__link
+    margin-top: auto
+    &::before
+      background-color: currentColor
+    &:active
+      color: var(--c__gray--darkest)
+
+.meta-body-slide-swiper-events
+  &__location, &__date
+    display: block
+    color: var(--c__gray--dark)
+    font-size: .75rem
+    font-weight: 600
+    line-height: 1rem
+    text-align: right
+
+// .publications
+//   
+
+.publications
+  background: no-repeat top / cover #222
+  background-attachment: fixed
+  background-image: url('../img/publications/publications-bg@320w.jpg')
+  &__container
+    padding-top: 56px
+    padding-bottom: 1px
+  &__title
+    margin-bottom: 17px
+  &__wrapper
+  &__column:first-child
+    margin-bottom: 49px
+  &__form
+  &__prices-form
+    margin-top: 65px
+  &__swiper
+    position: relative
+
+/* HD/Retina CSS background */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+  .publications
+    background-image: url('../img/publications/publications-bg@640w.jpg')
+
+.accordion-publications__item
+  border-top: 1px solid rgba(255,255,255,.5)
+  border-right: none
+  border-bottom: 1px solid rgba(255,255,255,.5)
+  border-left: none
+  background-color: transparent
+.accordion-publications__header
+.accordion-publications .accordion-publications__trigger
+  color: var(--c__white)
+  padding: 0.15em 0 0.25em
+  font-family: inherit
+  font-size: 1rem
+  font-weight: 700
+  line-height: 2em
+.accordion-publications .accordion-publications__trigger:focus
+  color: var(--c__white)
+.accordion-publications .accordion-publications__trigger::after
+  content: ''
+  top: 50%
+  right: 0
+  padding: 0
+  width: 12px
+  height: 7px
+  background: no-repeat center / cover
+  background-image: url('../img/chevron-down.png')
+  transform: translateY(-50%) rotate(0deg)
+  transform-origin: center
+  transition: transform var(--t__dur) var(--t__func)
+.accordion-publications .accordion-publications__trigger:disabled
+  cursor: default
+.accordion-publications__panel
+.accordion-publications--active .accordion-publications__panel
+  visibility: visible !important
+.accordion-publications--active .accordion-publications__trigger::after
+  transform: translateY(-50%) rotate(180deg)
+  
+.form-publications
+  &__check
+    display: block
+    padding: 0 1em 0 1.5em
+    &:first-child
+      border-top: 1px solid rgba(255,255,255,.5)
+    &:not(:last-child)
+      border-bottom: 1px solid rgba(255,255,255,.5)
+  &__prices
+
+.prices-form-publications
+  &__label, &__title, &__input
+    color: var(--c__white)
+    font-size: 1rem
+    line-height: 1em
+  &__title, &__input
+    padding: .513em .625em
+  &__label
+    display: block
+    margin-bottom: 15px
+    font-weight: 700
+  &__wrapper
+    display: flex
+    align-items: center
+    border: 1px solid rgba(255,255,255,.5)
+    border-radius: 8px
+    max-width: 277px
+  &__title
+    font-weight: 400
+  &__input
+    border: none
+    width: 73px
+    background: rgba(157, 92, 208, 0.5)
+
+.check-form-publications
+  position: relative
+  cursor: pointer
+  &__input:checked ~ &__text
+    color: var(--c__brand--light)
+  &__input:checked + &__box
+    background-image: url('../img/checkbox-on.png')
+  &__input:checked ~ &__cross
+    display: block
+  &__input:focus + &__box
+    background-image: url('../img/checkbox-off-focused.png')
+  &__input:focus ~ &__text
+    color: var(--c__brand--light)
+  &__input:checked:focus + &__box
+    background-image: url('../img/checkbox-on.png')
+  &__box
+    position: absolute
+    top: 50%
+    margin-left: -1.5em
+    width: 12px
+    height: 12px
+    transform: translateY(-50%)
+    background: no-repeat center / 12px 12px 
+    background-image: url('../img/checkbox-off.png')
+  &__cross
+    position: absolute
+    top: 50%
+    right: 0
+    display: none
+    width: .7em
+    height: .7em
+    transform: translateY(-50%)
+    background: no-repeat center / cover url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z' fill='%23C283F3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z' fill='%23C283F3'/%3E%3C/svg%3E%0A")
+  &__text
+    color: var(--c__white)
+    font-size: 1rem
+    font-weight: 400
+
+.prices-form-publications
+  &__wrapper
+  &__title
+  &__input
+
+.swiper-publications
+  &__wrapper
+    flex-wrap: wrap
+    box-sizing: border-box
+    margin: 0 -15px
+    width: auto
+  &__slide
+    min-height: 254px
+    width: 50%
+    margin-bottom: 50px
+    padding: 0 15px
+  &__navigation
+    display: none
+    margin-bottom: 28px
+  &__notification
+    position: absolute
+    top: 0
+    left: calc(50% + 34px / 2)
+    display: none
+    color: wheat
+    line-height: 1
+    font-size: 1.5rem
+
+.navigation-swiper-publications
+  &__pagination
+    position: static
+    padding: 0 18px
+    color: var(--c__white)
+  &__button
+    position: static
+    width: 30px
+    height: 30px
+    display: block
+    margin: 0
+    cursor: pointer
+    &::after
+      display: none
+    &--prev
+    &--next
+    &--disabled
+      opacity: .35
+      cursor: auto
+      pointer-events: none
+
+.book-publications
+  &__image-wrapper
+    margin-bottom: 10px
+    height: 44.69vw
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__title, &__author, &__price
+    color: var(--c__white)
+    font-size: .75rem
+    line-height: 1.333
+  &__author, &__price
+    display: block
+  &__title, &__author
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+  &__title
+    margin-bottom: 1px
+  &__author
+    margin-bottom: 3px
+  &__price
+    margin-bottom: 12px
+    font-style: italic
+  &__order-button
+    padding: .8em 2.849em 1em
+    
+// .projects
+//
+
+.projects
+  &__container
+    padding-top: 55px
+  &__title
+    margin-bottom: 17px
+  &__text
+    margin: 0 0 18px
+    white-space: pre-line
+  &__swiper-title
+    margin-bottom: 16px
+  &__tooltip
+    display: inline-block
+    margin-right: 3px
+    width: 18px
+    height: 18px
+    vertical-align: middle
+  &__wrapper-swiper
+    position: relative
+    padding: 0 47px
+  &__swiper
+    width: 100%
+    overflow: hidden
+
+.swiper-projects
+  &__wrapper
+    display: flex
+    width: 100%
+    height: 100%
+  &__slide
+    flex-shrink: 0
+    padding: 2px
+  &__partners-link
+    border: 1px solid var(--c__gray--light)
+    display: block
+    cursor: pointer
+    transition: border-color var(--t__dur) var(--t__func)
+    &:focus
+      border-color: var(--c__brand--dark)
+      outline: none
+    &:active
+      border-color: var(--c__brand--dark)
+    &:active .swiper-projects__partners-logo
+      filter: grayscale(0%)
+      opacity: 1
+  &__partners-logo
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    filter: grayscale(100%)
+    opacity: 0.25
+    transition: opacity var(--t__dur) var(--t__func), filter var(--t__dur) var(--t__func)
+  &__notification
+    display: none
+
+.navigation-swiper-projects
+  &__button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    &:focus
+      outline: none
+    &--prev
+      left: 0
+    &--next
+      right: 0
+    &--disabled
+      opacity: .35
+      cursor: auto
+      pointer-events: none
+
+.tooltip
+  cursor: pointer
+  & svg 
+    fill: white
+    transition-property: color, fill, stroke
+    transition-duration: var(--t__dur)
+    transition-timing-function: var(--t__func)
+  &:focus
+    outline: none
+    & svg 
+      fill: #D1A9F0
+ 
+  &:active
+    & svg 
+      fill: #9D5CD0
+      color: white
+
+.tippy-box[data-theme~='brand']
+  color: var(--c__white)
+  font-size: .75rem
+  font-weight: 600
+  text-align: center
+  background-color: var(--c__brand--dark)
+  & .tippy-content
+    padding: 9px
+
+.tippy-box[data-theme~='brand'][data-placement^='top'] > .tippy-arrow::before
+  border-top-color: var(--c__brand--dark)
+.tippy-box[data-theme~='brand'][data-placement^='bottom'] > .tippy-arrow::before
+  border-bottom-color: var(--c__brand--dark)
+.tippy-box[data-theme~='brand'][data-placement^='left'] > .tippy-arrow::before
+  border-left-color: var(--c__brand--dark)
+.tippy-box[data-theme~='brand'][data-placement^='right'] > .tippy-arrow::before
+  border-right-color: var(--c__brand--dark)
+
+// .contacts
+//  
+
+.contacts
+  padding-top: 53px
+  &__title
+    margin-bottom: 20px
+  &__body
+    padding-bottom: 30px
+
+.body-contacts
+  &__title
+    margin: 53px 0 20px
+  &__place
+    margin: 0 0 1px
+    color: var(--c__gray--darkest)
+    font-size: 1.125rem
+    font-weight: 600
+    line-height: 1
+  &__address
+    margin: 0 0 15px
+    font-size: .875rem
+    line-height: 1.5
+  &__ymap
+    margin-right: -15px
+    margin-left: -15px
+    width: calc(100% + 30px)
+    height: 320px
+  &__form
+    padding: 5px 0 24px
+  
+
+.form-body-contacts
+  &__title
+    margin-bottom: 19px
+    color: var(--c__gray--darkest)
+    font-size: 1.125rem
+    font-weight: 400
+    line-height: 1.5
+  &__input
+    margin-bottom: 20px
+  &__input
+    border: 1px solid var(--c__gray--darkest)
+    border-radius: 100px
+    display: block
+    width: 100%
+    max-width: 290px
+    height: 40px
+    padding: 0 22px
+    font-size: 1rem
+    font-weight: 400
+    line-height: 2
+    outline: none
+    transition-property: background-color, border-color
+    transition-duration: var(--t__dur)
+    transition-timing-function: var(--t__func)
+    &:focus
+      background: var(--c__gray--lighter)
+      outline: none
+  &__submit-button
+    color: var(--c__brand--dark)
+    padding: .934em 2.766em
+
+.invalid-message
+  display: inline-block
+  padding-left: 22px
+  color: #D11616
+  font-size: .75rem
+  line-height: 1.5
+.invalid-input
+  border-color: #D11616
+  
+.socials-body-contacts
+  &__title
+    margin: 0 0 9px
+    color: var(--c__gray--darkest)
+    font-size: 1.125rem
+    font-weight: 400
+    line-height: 1.5
+  &__list
+    display: flex
+  &__link
+    border: 1px solid transparent
+    border-radius: 50%
+    display: block
+    width: 50px
+    height: 50px
+    background: no-repeat center / 105%
+    opacity: 1
+    transition-property: border-color, opacity
+    transition-duration: var(--t__dur)
+    transition-timing-function: var(--t__func)
+    &:focus
+      opacity: .5
+      outline: none
+    &:active
+      border-color: var(--c__brand--dark)
+    &--whatsapp
+      background-image: url('../img/whatsapp.svg')
+    &--telegram
+      background-image: url('../img/telegram.svg')
+  &__item:not(:last-child)
+    margin-right: 20px
+
+[class*='ground-pane']
+  filter: grayscale(100%)
+
+// .footer
+//
+
+.footer
+  background: var(--c__black)
+  &__container
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    padding-top: 20px
+    padding-bottom: 20px
+  &__logo
+    display: block
+    width: 97px
+    height: 22px
+    & svg
+      display: block
+      width: 100%
+      height: 100%
+      transition: fill var(--t__dur) var(--t__func)
+      fill: var(--c__white)
+    &:focus
+      outline: none
+    &:focus svg
+      fill: var(--c__gray--light)
+    &:active svg
+      fill: var(--c__brand--dark)
+  &__socials
+    display: inline-flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 5px
+
+.socials-footer
+  &__link
+    box-sizing: content-box
+    display: block
+    padding: 0 15px 15px
+    width: 50px
+    height: 50px
+    & svg
+      width: 100%
+      height: 100%
+      transition: fill var(--t__dur) var(--t__func)
+      fill: var(--c__gray--light)
+    &:focus
+      outline: none
+    &:focus svg
+      fill: white
+    &:active svg
+      fill: var(--c__brand--dark)
+
+// .modal
+//
+  
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 9000
+  height: 100%
+  width: 100%
+  overflow: auto
+  background: rgb(0, 0, 0) //Fallback color
+  background: rgba(0, 0, 0, .9)
+  &__content
+    position: relative
+    display: block
+    margin-top: 15px
+    width: 100%
+  &__close
+    --size: 23px
+    position: absolute
+    top: 7px
+    right: 22px
+    z-index: 9001
+    border: 0
+    padding: 0
+    height: var(--size)
+    width: var(--size)
+    background: none
+
+.content-modal
+  &__image-wrap
+    height: 62.5vw
+    overflow: hidden
+    background: var(--c__white)
+  &__desc-wrap
+    padding: 20px 18px
+    background: var(--c__white)
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__author, &__title
+    margin: 0
+    color: var(--c__gray--darkest)
+    font-weight: 600
+    line-height: 1.1
+  &__author
+    margin-bottom: 5px
+    font-size: 1.5rem
+  &__title
+    margin-bottom: 3px
+    padding-left: 2px
+    font-size: 1rem
+  &__date
+    display: block
+    margin-bottom: 7px
+    padding-left: 2px
+    color: #969696
+    font-size: .75rem
+    font-weight: 400
+    line-height: 1.1
+  &__description
+    margin: 0
+    padding-left: 2px
+    width: 98%
+    color: var(--c__gray--darkest)
+    font-size: 1rem
+    line-height: 2
+
+.close-modal
+  cursor: pointer
+  &:focus
+    outline: 1px solid white
+  &:active &__line
+      background-color: var(--c__brand--darker)
+  &__line
+    position: absolute
+    top: 50%
+    left: 0
+    height: 1px
+    width: 100%
+    transform-origin: center
+    background: var(--c__black)
+    transition: background-color var(--t__dur) var(--t__func)
+    &--first
+      transform: translateY(-50%) rotate(45deg)
+    &--second
+      transform: translateY(-50%) rotate(-45deg)

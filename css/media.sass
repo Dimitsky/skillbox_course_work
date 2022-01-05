@@ -1,0 +1,1366 @@
+/*  */
+
+@media screen and (min-width: 580px)
+  // .gallery
+
+  .gallery
+    background-image: url('../img/gallery/gallery-bg@768w.jpg')
+    &__container
+      padding-top: 89px
+      padding-bottom: 70px
+    &__title
+      margin-bottom: 24px
+    &__form
+      margin-bottom: 48px
+    &__swiper
+      display: flex
+      justify-content: flex-end
+      flex-direction: column-reverse
+      margin-bottom: 29px
+
+  /* HD/Retina CSS background */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+    .gallery
+      background-image: url('../img/gallery/gallery-bg@1536w.jpg')
+
+
+  .form-gallery
+    &__label
+      margin-bottom: 10px
+
+  .choices
+    width: 42%
+  
+  .swiper-gallery
+    height: 85.5vw
+    &__wrapper
+      flex-wrap: wrap
+      flex-direction: column
+      margin-bottom: 0px
+    &__slide
+      height: calc(50% - 17px)
+    &__pagination-wrap
+      justify-content: flex-start
+      margin-bottom: 30px
+    &__pagination
+      margin: 0 19px
+    &__notification
+      display: block
+  
+  // .catalog
+
+  .tab-content-catalog
+    &__tablist
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      align-content: flex-start
+      margin-right: -59px
+      max-height: 450px
+      overflow-x: auto
+    &__item
+      margin-right: 59px
+
+  .catalog
+    &__header-wrapper
+      display: flex
+      justify-content: space-between
+
+/* Tablets */
+
+@media screen and (min-width: 768px)
+  .title
+    &--size--xs
+      font-size: 1.5rem
+
+  .container
+    padding-right: 50px
+    padding-left: 50px
+
+  .title
+    &--size--md
+      font-size: 3rem
+    &--size--lg
+      font-size: 4.5rem
+
+  .text
+    font-size: 1rem
+    line-height: 2rem
+
+  // .link 
+
+  .link--nav
+    font-size: 1.5rem
+
+  .header
+    &__top
+      height: 100px
+    &__logo
+      width: 187px
+      height: 43px
+    &__hamburger
+      top: 37px
+      left: 50px
+      width: 36px
+      height: 27px
+
+  .nav
+    &__wrap
+      padding: 104px 50px 50px
+      min-height: 768px
+    &__list
+      margin-bottom: 30px
+    &__item:not(:last-child)
+      margin-bottom: 16px
+
+  .account
+    &__link
+      padding: 16px 90px 15px 87px
+      font-size: 1.125rem
+      line-height: 1.389
+    &__icon
+      margin-right: 2px
+      width: 13px
+      height: 13px
+
+  .hamburger
+    &__line
+      height: 3px
+      &--top
+        width: 36px
+      &--mid
+        top: 12px
+        width: 28px
+      &--bot
+        top: 24px
+        width: 24px
+
+  .search
+    &__icon--close
+      width: 29px
+      height: 29px
+      fill: rgba(255,255,255,.85)
+    &__icon--open
+      width: 33px
+      height: 33px
+    &__icon--find
+      width: 32px
+      height: 32px
+    &__close-btn
+      top: 36px
+      right: 48px
+      width: 28px
+      height: 28px
+    &__find-btn
+      margin-right: 7px
+      width: 32px
+      height: 32px
+    &__input-wrap
+      left: -3px
+      align-items: center
+      padding-bottom: 1px
+      height: 100px
+      transform: translateY(-100px)
+    &__input
+      margin-right: 6%
+      padding: 5px 0px
+      width: 576px
+      font-size: 18px
+
+  .hero
+    &__wrap
+      padding-top: 113px
+      padding-bottom: 115px
+      min-height: 668px
+      text-align: left
+    &__title
+      margin-bottom: 11px
+    &__text
+      margin-right: 0
+      margin-left: 0
+      padding: 0
+      max-width: none
+      font-size: 1.125rem
+      font-weight: 700
+      line-height: 1.667
+    &__link
+      align-self: flex-start
+    &__dispatch-button
+      padding: .834em 1.848em
+      font-size: 1.125rem
+
+  .about
+    &__container
+      padding-top: 89px
+      padding-bottom: 70px
+    &__title
+      margin-bottom: 24px
+
+  // .gallery  
+
+  .swiper-gallery
+    &__notification
+      left: calc(50% + 34px / 2)
+
+  // .catalog
+
+  .catalog
+    &__container
+      padding-top: 89px
+    &__header-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 24px
+    &__tab-list
+      margin-bottom: 0
+    &__tab-item:not(:last-child)
+      margin-right: 54px
+    &__tab-trigger
+      width: 46px
+      height: 46px
+    &__accordion-container
+      margin-bottom: 50px
+    &__title
+      margin-right: 38px
+      margin-bottom: 0
+      min-height: 49px
+
+  .accordion-catalog
+    &__trigger
+      padding: 32px 0 33px !important
+      & svg
+        width: 50px
+        height: 50px
+    &__trigger-inner
+      font-size: 1.5rem
+    &__content
+      padding-top: 27px
+      padding-bottom: 24px
+    &__default-content
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: center
+    &__default-image
+      padding: 10px
+      width: 275px
+      height: 189px
+    &__default-title
+      font-size: 1.5rem
+      font-weight: 600
+    &__default-text
+      max-width: 275px
+    &__default-link
+      font-weight: 600
+
+  .tab-content-catalog
+    &__description
+      display: block
+      margin: 0 0 20px
+    &__tablist
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      align-content: flex-start
+      max-height: 340px
+      overflow-x: auto
+    &__item
+      margin-right: 59px
+  
+  .artists-catalog
+    &__image-wrap
+      margin-bottom: 35px
+      height: 54.55vw
+    &__title
+      margin-bottom: 3px
+      &--unknown-artist
+        margin-bottom: 15px
+    &__text
+      &--unknown-artist
+        margin-bottom: 15px
+        max-width: 400px
+    &__unknown-artist-name
+      font-size: 1.5rem
+
+  // .events
+
+  .events
+    &__container
+      padding-top: 34px
+      padding-bottom: 79px
+    &__title
+      margin-bottom: 24px
+    &__swiper
+      margin-bottom: 16px
+    &__load-more
+      display: block
+      margin: 0 auto
+      padding: .9em 1.85em 1em
+
+  .swiper-events
+    &__wrapper
+      flex-wrap: wrap
+      margin-right: -17px
+      margin-left: -17px
+      width: auto
+    &__slide:nth-child(n + 3)
+      display: none
+    &__slide
+      margin: 0 17px 34px
+      width: calc(50% - 34px)
+      &--show
+        display: flex !important
+    &__pagination
+      display: none
+
+  .slide-swiper-events
+    &__image-wrapper
+      height: 26vw
+    &__body
+      padding: 14px 10px 48px 34px
+
+  .body-slide-swiper-events
+    &__meta
+      margin-right: 6px
+    &__title
+      margin-right: 10px
+      margin-bottom: 3px
+      line-height: 33px
+    &__description
+      margin-bottom: 58px
+
+  // .publications
+
+  .publications
+    background-attachment: scroll
+    background-position: center
+    background-image: url('../img/publications/publications-bg@768w.jpg')
+    &__container
+      padding-top: 93px
+      padding-bottom: 72px
+    &__title
+      margin-bottom: 30px
+    &__form
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      margin-right: -58px
+      max-height: 148px
+      overflow-x: auto
+    &__prices-form
+      margin-top: 0
+    &__accordion
+      margin-bottom: 33px
+    &__swiper
+      padding: 0 27px
+
+  /* HD/Retina CSS background */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+    .publications
+      background-image: url('../img/publications/publications-bg@1536w.jpg')
+
+  .accordion-publications__item
+    border: none
+  .accordion-publications .accordion-publications__header
+    margin-bottom: 5px
+  .accordion-publications .accordion-publications__trigger
+    line-height: 1
+  .accordion-publications .accordion-publications__trigger::after
+    display: none
+
+  .form-publications
+    &__check
+      margin-right: 42px
+      padding: 0 1em 0 1.5em
+      &:first-child, &:not(:last-child)
+        border: none
+
+  .check-form-publications
+    &__box
+      margin-left: -1.5em
+    &__input:checked ~ &__cross
+      display: none
+
+  .swiper-publications
+    overflow: hidden
+    &__wrapper
+      flex-wrap: nowrap
+      box-sizing: inherit
+      margin: 0
+      width: 100%
+    &__slide
+      width: auto
+      margin: 0
+      padding: 0 0 4px 0
+    &__navigation
+      display: flex
+      margin-left: -27px
+      margin-bottom: 29px
+    &__notification
+      display: block
+
+  .book-publications
+    &__image-wrapper
+      margin-bottom: 14px
+      height: 41.667vw
+    &__title, &__author, &__price
+      font-size: 1rem
+    &__meta
+      display: flex
+      justify-content: space-between
+      margin-bottom: 14px
+    &__order-button
+      padding: .4em 1.225em .65em
+      font-size: 1rem
+
+  .meta-book-publications
+    &__wrapper
+      margin-right: 34px
+      max-width: 58%
+
+  // .projects
+
+  .projects
+    &__container
+      padding-top: 88px
+    &__title
+      margin-bottom: 25px
+    &__text
+      margin-bottom: 31px
+      width: 99%
+    &__swiper-title
+      margin-bottom: 30px
+    &__wrapper-swiper
+      padding: 0 52px
+
+  .swiper-projects
+    &__partners-link
+      height: 106px
+
+  // .contacts
+
+  .contacts
+    padding-top: 86px
+    &__title
+      margin-bottom: 25px
+    &__body
+      position: relative
+      border: 1px solid var(--c__gray--light)
+      padding-bottom: 0
+
+  .body-contacts
+    &__inner
+      border: 1px solid var(--c__gray--light)
+      border-top: none
+      padding-top: 121px
+      padding-bottom: 103px
+      padding-left: 48px
+      width: 430px
+    &__ymap
+      position: absolute
+      top: -1px
+      right: 0
+      margin: 0
+      height: 100%
+      width: calc(100% - 430px)
+    &__title
+      margin: 84px 0 24px
+    &__place
+      margin-bottom: 6px
+      font-size: 1.5rem
+      line-height: 1.5
+    &__address
+      margin: 0
+      font-size: 1rem
+    &__form
+      padding: 5px 0 0
+      margin-bottom: 33px
+
+  .form-body-contacts
+    &__title
+      margin-bottom: 15px
+      font-size: 1.5rem
+    &__input
+      margin-bottom: 23px
+      max-width: unset
+      width: 335px
+    &__submit-button
+      padding: .973em 1.85em
+      font-size: 1.125rem
+
+  .socials-body-contacts
+    &__title
+      margin-bottom: 13px
+      font-size: 1.5rem
+    &__item:not(:last-child)
+      margin-right: 30px
+    &__link
+      width: 60px
+      height: 60px
+
+  // .footer
+
+  .footer
+    &__container
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      padding-top: 40px
+      padding-bottom: 40px
+    &__logo
+      margin-right: 30px
+      width: 172px
+      height: 40px
+    &__socials
+      justify-content: flex-start
+      margin-bottom: 0
+
+  .socials-footer
+    &__item:not(:last-child)
+      margin-right: 30px
+    &__link
+      padding: 0
+      width: 60px
+      height: 60px
+
+  // .modal
+
+  .modal
+    &__content
+      display: flex
+      margin-top: 50px
+    &__close
+      top: 16px
+      right: 67px
+
+  .content-modal
+    &__image-wrap
+      flex: 0 0 39.063vw
+      height: auto
+    &__desc-wrap
+      padding: 125px 36px 112px 50px
+    &__author
+      margin-bottom: 5px
+    &__title
+      padding-left: 1px
+    &__date
+      margin-bottom: 37px
+      padding-left: 1px
+    &__description
+      padding-left: 1px
+      font-size: 1rem
+
+/* Laptops */
+
+@media screen and (min-width: 1024px)
+  .button
+    &:hover:not(:active)
+      color: var(--c__white)
+      background: var(--c__brand--dark)
+    &--fill
+      &:hover:not(:active)
+        border-color: var(--c__brand--lighter)
+
+  // .link 
+
+  .link
+    &:hover
+      &::before
+        background-color: currentColor
+
+  .link--nav
+    &:hover:not(:focus)
+      color: var(--c__brand--light)
+      &::before
+        background-color: transparent
+    &:active
+      &::before
+        background-color: transparent
+
+  .link--inline
+    &:hover:not(:focus)
+      color: var(--c__brand--dark)
+      
+  .link--login
+    &:hover
+      color: var(--c__white)
+      background-color: var(--c__brand--dark)
+
+  .header
+    &__logo
+      &:hover:not(:active) svg
+        fill: var(--c__gray--light)
+
+  // .search
+    
+  .search
+    &__close-btn
+      top: 35px
+      right: 48px
+      width: 31px
+      height: 31px
+    &__close-btn[aria-expanded="true"]
+      display: none
+    &__find-btn
+      &:hover
+        cursor: pointer
+    &__input-wrap
+      top: 34px
+      right: 50px
+      left: auto
+      padding: 4px
+      width: auto
+      height: auto
+      transform: none
+      opacity: 0
+      transition: opacity var(--t__speed) var(--t__func), visibility 0s var(--t__speed)
+    &.active
+      opacity: 1
+    &__icon
+      &:hover
+        fill: var(--c__brand--light)
+    &__input
+      margin-right: 0
+      width: 218px
+      cursor: pointer
+      &:hover
+        border-color: var(--c__brand--light)
+
+  .hero
+    &__title
+      max-width: 600px
+    &__text
+      max-width: 661px
+
+  // .gallery
+
+  .gallery
+    background-image: url('../img/gallery/gallery-bg@1024w.jpg')
+    &__container
+      display: flex
+      padding-bottom: 70px
+    &__body
+      display: flex
+      flex-direction: column
+      flex: 0 0 280px
+      margin-right: 50px
+    &__swiper
+      flex-grow: 1
+      margin-top: 15px
+      margin-bottom: 11px
+    &__description
+      margin-top: auto
+
+  /* HD/Retina CSS background */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+    .gallery
+      background-image: url('../img/gallery/gallery-bg@2048w.jpg')
+
+
+  .choices
+    width: 100%
+
+  .swiper-gallery
+    width: 594px
+    height: 63.9vw
+    &__image-wrap
+       &:hover::before
+        opacity: 1
+
+  // .catalog
+
+  .catalog
+    &__container
+      padding-top: 88px
+    &__header-wrapper
+      justify-content: flex-start
+      margin-bottom: 8px
+    &__tab-item:not(:last-child)
+      margin-right: 50px
+    &__tab-trigger
+      &:hover
+        box-shadow: -2px -2px 20px 0px rgba(157,92,208,.7)
+    &__title
+      margin-right: 43px
+      min-height: 65px
+    &__accordion-container
+      width: calc(50% - 25px)
+    &__country-tabtrigger
+      &:hover 
+        box-shadow: -2px -2px 20px 0px rgba(157,92,208,.7)
+  
+  .accordion-catalog
+    &__content
+      padding-top: 27px
+    &__trigger
+      padding: 34px 0 31px !important
+      &:hover:not(:focus)::before
+        border-color: var(--c__brand--lighter) !important
+      &:hover:not(:focus) &-inner
+        color: var(--c__brand--dark)
+      &:hover:not(:focus) svg
+        fill: var(--c__brand--lighter)
+        stroke: var(--c__brand--lighter)
+    &__default-image
+      padding: 6px
+      width: 189px
+      height: 130px
+
+  .tab-content-catalog
+    &__wrapper
+      display: flex
+      flex-direction: row-reverse
+    &__description
+      margin-bottom: 39px
+    &__wrapper-panel
+      margin-right: 50px
+      width: calc(50% - 25px)
+    &__panel
+      margin-top: 0
+    &__tablist
+      margin-right: -65px
+      max-height: 436px
+    &__item
+      margin-right: 65px
+    
+  .artists-catalog
+    &__image-wrap
+      margin-bottom: 36px
+      height: 26.7vw
+    &__title
+      margin-bottom: 3px
+      &--unknown-artist
+        margin-bottom: 15px
+
+  // .events
+
+  .events
+    &__container
+      padding-top: 40px
+      padding-bottom: 80px
+    &__swiper
+      margin-bottom: 24px
+
+  .swiper-events
+    &__wrapper
+      flex-wrap: wrap
+      margin-right: -13.5px
+      margin-left: -13.5px
+      width: auto
+    &__slide
+      margin: 0 13.5px 27px
+      width: calc(33.33% - 27px)
+    &__slide:nth-child(n)
+      display: flex
+    &__slide:nth-child(n + 4)
+      display: none
+
+  .slide-swiper-events
+    &__body
+      padding-bottom: 47px
+    &__image-wrapper
+      height: 19.5vw
+
+  .body-slide-swiper-events
+    &__title
+      margin-bottom: 4px
+      max-width: 98%
+    &__meta
+      margin-bottom: 4px
+      padding-right: 1px
+    &__description
+      margin-bottom: 25px
+      padding-right: 21px
+    &__link
+      &:hover:not(:focus)
+        color: var(--c__brand--darker)
+
+  // .publications
+
+  .publications
+    background-image: url('../img/publications/publications-bg@1024w.jpg')
+    &__container
+      padding-top: 89px
+      padding-bottom: 81px
+    &__title
+      margin-bottom: 20px
+    &__wrapper
+      display: flex
+    &__column
+      &:nth-child(1)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-right: 18px
+        margin-bottom: 0
+        width: 29.945%
+      &:nth-child(2)
+        flex-grow: 0
+        flex-shrink: 0
+        padding-top: 25px
+        width: 68%
+    &__prices-form
+      margin-top: auto
+    &__form
+      display: block
+      margin-right: 0
+      max-height: unset
+    &__swiper
+      padding: 0
+
+  /* HD/Retina CSS background */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+    .publications
+      background-image: url('../img/publications/publications-bg@2048w.jpg')
+
+  .swiper-publications
+    &__navigation
+      margin-left: 0
+    
+  .form-publications
+    &__check
+      margin-right: 0
+
+  .book-publications
+    &__image-wrapper
+      margin-bottom: 13px
+      height: 31.25vw
+
+  .check-form-publications
+    &__input:hover:not(:checked) + &__box
+      background-image: url('../img/checkbox-off-focused.png')
+    &__input:hover:not(:checked) ~ &__text
+      color: var(--c__brand--light)
+
+  // .projects
+
+  .projects
+    &__title
+      margin-bottom: 25px
+    &__text
+      margin-bottom: 25px
+      white-space: normal
+    &__swiper-title
+      margin-bottom: 26px
+
+  .swiper-projects
+    &__partners-link
+      height: 128px
+      &:hover .swiper-projects__partners-logo
+        filter: grayscale(0%)
+        opacity: 1
+
+  .tooltip
+    &:hover
+      & svg 
+        fill: #D1A9F0
+
+  // .contacts
+
+  .contacts
+    padding-top: 85px
+
+  .body-contacts
+    &__inner
+      padding-bottom: 101px
+      width: 487px
+    &__ymap
+      width: calc(100% - 487px)
+
+  .body-contacts
+    &__inner
+      padding-top: 120px
+    &__form
+      margin-bottom: 36px
+
+  .form-body-contacts
+    &__input:nth-of-type(2)
+      margin-bottom: 21px
+    &__input
+      &:hover
+        background-color: var(--c__gray--lighter)
+
+  .socials-body-contacts
+    &__link
+      &:hover
+        opacity: .5
+
+  // .footer
+
+  .footer
+    &__logo
+      &:hover:not(:active) svg
+        fill: var(--c__gray--light)
+
+  .socials-footer
+    &__link
+      &:hover:not(:active) svg
+        fill: var(--c__white)
+
+  // .modal
+
+  .modal
+    &__content
+      top: 50%
+      left: 50%
+      padding: 0
+      width: 58.009vw
+      margin: 0
+      transform: translate(-50%, -50%)
+    &__close
+      top: 17px
+      right: 17px
+
+  .content-modal
+    &__image-wrap
+      flex-basis: 25.782vw
+    &__desc-wrap
+      padding-bottom: 80px
+      padding-left: 49px
+    &__description
+      width: 96%
+
+  .close-modal
+    &:hover &__line
+      background-color: var(--c__brand--dark)
+
+/* Desktops */
+
+@media screen and (min-width: 1600px)
+  .container
+    margin: auto
+    padding-right: 0
+    padding-left: 0
+    max-width: 1600px
+
+  // .link 
+
+  .link--nav
+    font-size: 1.125rem
+    &:hover:not(:focus)
+      color: var(--c__brand--dark)
+      background: transparent
+    &:active
+      color: var(--c__brand--darker) !important
+
+  .link--login
+    &:focus
+      &::after
+        background: var(--c__brand--darker) !important
+        border-color: transparent !important
+        border-radius: 0
+    &:active
+      background: none
+  
+  .header
+    &__container--top
+      justify-content: space-between
+    &__bottom
+      position: absolute
+      top: 100px
+      z-index: 1
+      width: 100%
+      background: rgba(0,0,0,.4)
+    &__container--bottom
+      display: flex
+      height: 70px
+    &__logo
+      width: 173px
+      height: 40px
+    &__nav
+      flex-basis: 1254px
+    &__hamburger
+      display: none
+    &__dropdown
+      display: flex
+      flex-basis: 1250px
+      flex-wrap: wrap
+      margin-right: 30px
+    &__search
+      display: flex
+      align-items: center
+      margin-left: auto
+
+  .hero
+    &__wrap
+      padding-top: 222px
+      padding-bottom: 112px
+      min-height: 737px
+    &__container
+      width: 100%
+    &__title
+      margin-bottom: 4px
+    &__text
+      max-width: 580px
+    &__dispatch-button
+      padding: .667em 1.85em
+      font-size: 1.125rem
+
+  .bg
+    &__image
+      position: static
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  .nav
+    &__wrap
+      position: static
+      flex-direction: row
+      align-items: center
+      margin: 0
+      padding: 0
+      height: 100%
+      min-height: auto
+      background: none
+      transform: none
+      visibility: visible
+    &__list
+      display: flex
+      flex-basis: 908px
+      flex-wrap: wrap
+      margin: 0 30px 0 7px
+    &__item:not(:last-child)
+      margin: 0 62px 0 0
+    &__account
+      align-self: auto
+      margin-top: initial
+      margin-left: auto
+  
+  .account
+    &__link
+      border: none
+      border-radius: 0
+      padding: 0
+      font-weight: 400
+      line-height: 1
+
+  .dropdown
+    &__item
+      position: relative
+      display: flex
+      align-items: center
+    &__item:not(:last-child)
+      margin-right: 98px
+    &__content,
+    &__simplebar
+      height: 220px
+    &__body
+      position: absolute
+      bottom: -300px
+      z-index: 1
+      padding: 40px
+      width: 300px
+      height: 300px
+      background: rgba(0,0,0,.6)
+      opacity: 0
+      visibility: hidden
+      transition: visibility 0s var(--t__speed) var(--t__func), opacity var(--t__speed) var(--t__func)
+      &.active
+        opacity: 1
+        visibility: visible
+        transition-delay: 0s, 0s
+    &__button
+      display: flex
+      align-items: center
+      font-size: 1.125rem
+      font-weight: 400
+      cursor: pointer
+    &__chevron
+      transition: transform var(--t__speed) var(--t__func)
+    &__button[aria-expanded="true"] &__chevron
+        transform: rotate(-180deg)
+    &__chevron
+      margin-top: 5px
+      margin-left: 3px
+      width: 12px
+      height: 7px
+
+  .content-dropdown
+    &__item
+      position: relative
+      display: flex
+      align-items: center
+      padding: 0 14px
+      min-height: 40px
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+    &__item:not(:last-child)
+      margin-bottom: 20px
+    &__link
+      color: var(--c__white)
+      font-weight: 600
+      text-decoration: none
+      outline: none
+    &__link::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      border: 2px solid transparent
+      width: 100%
+      height: 100%
+      transition: border var(--t__speed) var(--t__func), background-color var(--t__speed) var(--t__func)
+    &__link:hover::after,
+    &__link:focus::after
+      border-color: var(--c__brand--dark)
+    &__link:active::after
+      border-color: var(--c__brand--lighter)
+      background: rgba(194,131,243,.4)
+
+  .search
+    &__close-btn
+      position: static
+      align-self: flex-end
+      margin-right: 5px
+      height: 24px
+    &__input-wrap
+      position: static
+      align-items: flex-end
+      padding: 4px 0px 4px 4px
+      opacity: 1
+      visibility: visible
+      background: none
+    &__find-btn
+      width: 25px
+      height: 25px
+    &__close-btn
+      display: none
+    &__input
+      padding: 5px 0px 4px
+      width: 220px
+    &__icon--find
+      width: 25px
+      height: 25px
+    &__icon--open
+      width: 24px 
+      height: 24px
+
+  .about
+    &__container
+      padding-top: 51px
+    &__text
+      max-width: 1080px
+
+  .gallery
+    background-image: url('../img/gallery/gallery-bg@1920w.jpg')
+    &__body
+      flex-basis: 400px
+
+  /* HD/Retina CSS background */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+    .gallery
+      background-image: url('../img/gallery/gallery-bg@3840w.jpg')
+
+
+  .swiper-gallery
+    height: 811px
+    &__slide
+      height: calc(50% - 25px)
+    &__pagination-wrap
+      margin-left: 3px
+    &__notification
+      left: calc(66% + 41px)
+
+  // .catalog
+
+  .catalog
+    &__header-wrapper
+      margin-bottom: 24px
+    &__title
+      margin-right: 41px
+      min-height: auto
+    &__accordion-container
+      flex: 1 1 800px
+      width: auto
+
+  .accordion-catalog
+    &__default-image
+      width: 275px
+      height: 189px
+
+  .tab-content-catalog
+    &__wrapper
+      justify-content: space-between
+    &__description
+      max-width: 1080px
+    &__tablist
+      align-content: flex-start
+      margin-right: -60px
+      max-height: 340px 
+    &__item
+      margin-right: 60px
+    &__wrapper-panel
+      flex: 1 1 750px
+      width: auto
+
+  .artists-catalog
+    &__image-wrap
+      height: 470px
+    &__unknown-artist-image
+      width: 236px
+
+  // .events
+
+  .events
+    &__container
+      padding-bottom: 80px
+    &__swiper
+      margin-bottom: 0px
+
+  .swiper-events
+    &__wrapper
+      margin-right: -25px
+      margin-left: -25px
+    &__slide
+      margin: 0 25px 50px
+      width: calc(33.33% - 50px)
+
+  .slide-swiper-events
+    &__image-wrapper
+      height: 300px
+    &__body
+      padding: 14px 18px 39px 49px
+
+  .body-slide-swiper-events
+    &__meta
+      margin-right: 0
+      padding-right: 0
+    &__description
+      margin-bottom: 83px
+
+  // .publications
+
+  .publications
+    background-image: url('../img/publications/publications-bg@1920w.jpg')
+    &__container
+      padding-bottom: 73px
+    &__wrapper
+      justify-content: space-between
+    &__column
+      &:nth-child(1)
+        width: unset
+        margin-right: 10px
+      &:nth-child(2)
+        width: 1150px
+    &__prices-form
+      padding-bottom: 6px
+
+  /* HD/Retina CSS background */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 1.5/1), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx)
+    .publications
+      background-image: url('../img/publications/publications-bg@3840w.jpg')
+        
+  .book-publications
+    &__meta
+      margin-bottom: 12px
+    &__image-wrapper
+      margin-bottom: 25px
+      height: 390px
+    &__order-button
+      padding: .5em 1.225em .55em
+
+  .swiper-publications
+    &__navigation
+      margin-bottom: 27px
+
+  // .projects
+
+  .projects
+    &__container
+      padding-top: 88px
+    &__text
+      max-width: 1066px
+    &__wrapper-swiper
+      padding: 0 75px
+
+  .swiper-projects
+    &__partners-link
+      height: 150px
+
+  // .contacts
+
+  .contacts
+    padding-top: 86px
+    overflow-x: hidden
+    &__title
+      margin-bottom: 25px
+    &__body
+      position: relative
+
+  .body-contacts
+    &__inner
+      padding-bottom: 123px
+      border: none
+      width: auto
+      & > *:not(#contacts-ymap)
+        width: 460px
+    &__place
+      margin-bottom: 5px
+
+    &__ymap
+      position: absolute
+      border-left: 1px solid var(--c__gray--light)
+      max-width: 1238px
+      width: calc( 1078 / 1600 * 100% + ( ( 100vw - 100% ) / 2 ) )
+
+  .form-contacts
+    &__title
+      margin-bottom: 13px
+      line-height: 1.6
+    &__input
+      margin-bottom: 23px
+      width: 400px
+
+  .form-body-contacts
+    &__input
+      width: 400px
+
+  .socials-contacts
+    &__link:not(:last-child)
+      margin-right: 20px
+    &__link
+      width: 40px
+      height: 40px
+
+  .socials-body-contacts
+    &__item:not(:last-child)
+      margin-right: 20px
+    &__link
+      width: 40px
+      height: 40px
+
+  // .footer
+
+  .footer
+    &__container
+      padding-top: 47px
+      padding-bottom: 48px
+  .socials-footer
+    &__item:not(:last-child)
+      margin-right: 20px
+    &__link
+      width: 45px
+      height: 45px
+
+  // .modal
+
+  .modal
+    &__content
+      margin: 0
+      padding: 0
+      width: 900px
+    &__close
+      top: 17px
+      right: 17px
+
+  .content-modal
+    &__image-wrap
+      flex-basis: 400px
+    &__desc-wrap
+      padding-bottom: 114px
+      padding-left: 48px
+    &__description
+      width: 96%
